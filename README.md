@@ -15,7 +15,7 @@ Make sure that [Django]("djangoproject.com") and [Python]("python.org") is insta
 To run this project
 
 ```bash
-  npm run deploy
+  python manage.py runserver
 ```
 
   
