@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>TextUtils.in</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">TextUtils.in</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About Us</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#">Contact Us</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>Welcome To textUtils!</strong> Do any thing with your text.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<form action="/analyse" method="post">  {% csrf_token %}
+   <div class="container">
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Enter Your Text Here</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" name="text" rows="8"></textarea>
+  </div>
+
+      <div class="container">
+    </div>
+    <div class="form-check form-switch">
+  <input class="form-check-input" name="removepunc" type="checkbox" id="flexSwitchCheckDefault">
+  <label class="form-check-label" for="flexSwitchCheckDefault">Remove Punctuations</label>
+</div>
+    <div class="form-check form-switch">
+  <input class="form-check-input" name="fullcaps" type="checkbox" id="flexSwitchCheckDefault2">
+  <label class="form-check-label" for="flexSwitchCheckDefault2">Capitalize all words </label>
+</div>
+    <div class="form-check form-switch">
+  <input class="form-check-input" name="newlineremover" type="checkbox" id="flexSwitchCheckDefault3">
+  <label class="form-check-label" for="flexSwitchCheckDefault3">New Line Remover </label>
+</div>
+    <div class="form-check form-switch">
+  <input class="form-check-input" name="extraspaceremover" type="checkbox" id="flexSwitchCheckDefault4">
+  <label class="form-check-label" for="flexSwitchCheckDefault4">Extra Space Remover </label>
+</div>
+    <div class="form-check form-switch">
+  <input class="form-check-input" name="CharCount" type="checkbox" id="flexSwitchCheckDefault5">
+  <label class="form-check-label" for="flexSwitchCheckDefault5">Character Counter </label>
+</div>
+      <button type="submit" class="btn btn-dark mt-2">Analyse Text</button>
+         </div>
+</form>
+
+<!--<input type="checkbox" name="removepunc" id="rc">Remove Punctuations <br>-->
+<!--    <input type="checkbox" name="fullcaps">Capitalize all words <br>-->
+<!--    <input type="checkbox" name="newlineremover">New Line Remover <br>-->
+<!--    <input type="checkbox" name="extraspaceremover">Extra Space Remover <br>-->
+<!--    <input type="checkbox" name="CharCount">Character Counter <br>-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  </body>
+</html>
