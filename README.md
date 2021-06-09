@@ -11,7 +11,7 @@ Make sure that [Django]("djangoproject.com") and [Python]("python.org") is insta
   pip install django
 ```
     
-# Run
+## Run
 To run this project
 
 ```bash
