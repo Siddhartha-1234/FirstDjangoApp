@@ -1,4 +1,5 @@
 # FirstDjangoApp
+# A text utils project
 
 To run file in terminal type python manage.py runserver
 
